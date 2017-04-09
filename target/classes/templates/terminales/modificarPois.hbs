@@ -1,0 +1,42 @@
+{{# partial "titulo" }}	
+	<title> Editar POI </title>
+{{/partial}}
+
+{{# partial "contenidoAdmin" }}	
+
+<div class="form-group" align="left">
+<h1> Editar POI: </h1>
+
+{{# POI}}
+<form action="/poi/modificar/{{id}}" method="POST">
+  	<label for="nombre">Nombre:</label><br>
+	<input type="text" name="nombre" value="{{nombre}}" required><br>
+	<label for="nombre">Direccion:</label><br>
+	<input type="text" name="direccion" value="" required><br>
+	<label for="nombre">Numero:</label><br>
+	<input type="number" name="numero" value="" required><br>
+</div>
+
+
+<div class="form-group">
+<h1> Editar Coordenadas: </h1><br>
+{{# Coordenada}}
+	<label for="nombre">Latitud:</label><br>
+	<input type="latitud" name="latitud" value="" required><br>
+	<label for="nombre">Longitud:</label><br>
+	<input type="longitud" name="longitud" value="" required><br>
+{{/Coordenada}}
+</div>
+
+<div class="col-md-2">
+	<input type="submit" class="form-control btn btn-default" value="Modificar">
+</div>
+
+
+</form>
+{{/POI}}
+
+{{/partial}}
+				
+{{>layoutAdmin.hbs}}
+

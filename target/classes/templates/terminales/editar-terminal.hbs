@@ -1,0 +1,73 @@
+{{# partial "titulo" }}	
+	<title> Editar Terminal </title>
+{{/partial}}
+
+{{# partial "contenidoAdmin" }}	
+
+<div class="form-group" align="left">
+<h1> Editar Terminal: </h1>
+
+{{# usuario}}
+<form action="/terminales/{{id}}" method="POST">
+  	<label for="nombre">Nombre:</label><br>
+	<input type="text" name="nombre" value="{{nombre}}" required><br>
+	<label for="nombre">Nueva Password:</label><br>
+	<input type="password" name="password" value="" required><br>
+</div>
+
+<div class="form-group">
+<h1> Editar Datos Comuna: </h1><br>
+{{# comuna}}
+	<label for="nombre">Nombre:</label><br>
+	<input type="text" name="comunaNombre" value="{{nombre}}" required><br>
+	<label for="nombre">Coordenadas:</label><br>
+	<label for="nombre">Latitud X:</label>
+	<input type="number" name="latitudX" value="{{lat1}}" min="0" max="1000" required><br>
+	<label for="nombre">Latitud Y:</label>
+	<input type="number" name="latitudY" value="{{lat2}}" min="0" max="1000" required><br>
+	<label for="nombre">Longitud X:</label>
+	<input type="number" name="longitudX" value="{{long1}}" min="0" max="1000" required><br>
+	<label for="nombre">Longitud Y:</label>
+	<input type="number" name="longitudY" value="{{long2}}" min="0" max="1000" required><br>
+{{/comuna}}
+</div>
+
+
+<div class="col-md-2">
+	<input type="submit" class="form-control btn btn-default" value="Modificar">
+</div>
+
+
+<nav> 
+<div class="form-group">
+<h1> Configurar Acciones: </h1><br>
+
+	<div class="row">
+		<div class="col-md-12">	
+		<table class="table table-striped" >
+
+			<tr>
+				<th>Nombre</th>
+				<th>Tipo Accion</th>
+			</tr>
+
+			{{# acciones}}
+			<tr>
+				<th><input type="text" name="nombre" value="{{nombre}}" required><br></th>
+				<th><input type="text" name="tipo" value="{{tipo}}" required><br></th>
+			</tr>
+			{{/ acciones}}
+
+		</table>
+		</div>
+	</div>
+</div>
+</nav> 
+
+
+</form>
+{{/usuario}}
+
+{{/partial}}
+				
+{{>layoutAdmin.hbs}}

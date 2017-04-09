@@ -1,0 +1,14 @@
+{{#partial "contenido"}}
+
+<h1>Poi: {{poi.nombre}}</h1>
+<div class="jumbotron">
+	<h5>Direccion: {{poi.direccion.direccionCompuesta}}</h5>
+	<br />
+	<h5>Coordenada: {{poi.coordenada.toString}}</h5>
+</div>
+
+
+
+{{/partial}}
+
+{{>layout.hbs}}

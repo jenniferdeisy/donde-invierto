@@ -1,0 +1,79 @@
+{{# partial "titulo" }}	
+	<title>Historial de Busquedas</title>
+{{/partial}}
+		
+{{# partial "contenidoAdmin" }}	
+
+<form action="/historiales/">
+  <div class="row">
+  
+  	<div class="col-md-10">
+  		<label for="Name">busqueda por terminal y por cantidad:</label>
+  	</div>
+
+	<div class="col-md-10">
+		<input type="text" class="form-control" name="filtroTerminal">
+	</div>
+
+	<div class="col-md-2">
+		<input type="submit" class="form-control btn btn-default">
+	</div>
+
+	<div class="col-md-10">
+		<label for="Name">Busqueda Por fecha, Fomato: aaaa-mm-dd</label>
+	</div>
+		
+	<div class="col-md-10">
+		<input type="submit" value="Enviar" />	
+  	</div>
+
+<div class="col-md-10">
+	<label for="Name">Fecha Desde:</label>
+</div>
+	
+<div class="col-md-10">
+	<input type="text" id="Name" name="fechaDesde" />
+</div>
+
+<div class="col-md-10">
+	<label for="Name">Fecha Hasta:</label>
+</div>
+
+<div class="col-md-10">
+	<input type="text" id="Name" name="fechaHasta" />
+</div>
+		
+<div class="row">
+	
+	<div class="col-md-12">	
+	<table class="table table-striped" >
+		
+		<th>id </th>
+			<th>Frase Busqueda</th>
+			<td>Tiempo De Demora</th>
+			<th>Nombre Terminal</th>
+			<th> Seleccionar Busqueda</th>
+		</hr>
+		
+		{{#each busquedas}}
+		<tr>
+			<td>{{id}}</td>
+			<td>{{fraseBusqueda}}</td>
+			<td>{{tiempoDeDemora}}</td>
+			<td>{{usuario.nombre}}</td>
+			<td>
+				<a href="/historiales/{{id}}">Seleccionar</a>
+				</td>
+		</tr>
+		{{/each}}
+					
+	</table>
+	</div>
+
+</div>
+
+</form>
+
+{{/partial}}
+				
+{{> layoutAdmin.hbs }}

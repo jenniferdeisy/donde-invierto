@@ -1,0 +1,58 @@
+{{# partial "titulo" }}	
+	<title>Terminales</title>
+{{/partial}}
+
+{{# partial "contenidoAdmin" }}	
+
+<form action="/terminales/">
+  <div class="row">
+	  <div class="col-md-8">
+			<input type="text" class="form-control" name="filtroComuna">
+		</div>
+
+		<div class="col-md-2">
+			<input type="button" class="form-control btn btn-default" value="Filtrar" name="filtrar">
+		</div>
+
+		<div class="col-md-2">
+			<a href="/terminales/nueva" type="button" class="form-control btn btn-default"> Nueva </a>
+		</div>
+  </div>
+</form>
+
+<form action="/terminales/" method="DELETE">
+<div id="" style="overflow:scroll; height:400px;">
+
+	<div class="row">
+		<div class="col-md-12">	
+		<table class="table table-striped" >
+
+			<tr>
+				<th>Nombre</th>
+				<th>Comuna</th>
+				<th> Editar/Eliminar</th>
+			</tr>
+
+			{{#each terminales}}
+			<tr>
+		
+				<td>{{nombre}}</td>
+				<td>{{comunaQuePertenece.nombre}}</td>
+				<td>
+				<a href="/editar/{{id}}">Editar</a>
+				<a href="/eliminar/{{id}}">Eliminar</a>
+				</td>
+
+			</tr>
+			{{/each}}
+
+		</table>
+		</div>
+	</div>
+</div>
+</form>
+
+
+{{/partial}}
+				
+{{>layoutAdmin.hbs}}

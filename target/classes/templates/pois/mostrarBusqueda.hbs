@@ -1,0 +1,40 @@
+{{# partial "titulo" }}	
+	<title> Historiales </title>
+{{/partial}}
+
+{{# partial "contenidoAdmin" }}	
+
+ <h1>RESULTADOS DE LA BUSQUEDA</h1>
+
+<form action="/mostrarBusqueda" >
+	 
+</form>
+
+	<table class="table table-stripped">
+		<h4>Listado de POIs</h4>
+
+		<tr>
+			
+			<th>Nombre</th>
+			<th>Tipo</th>
+			<th>Direccion</th>
+			<th>Coordenada</th>
+			<th></th>
+		</tr>
+
+		{{#each poisObtenidos}} <!-- clase POI -->
+		<tr>
+		
+			<td>{{nombre}}</td>
+			<td>{{TipoPoi}}</td>
+			<td>{{direccion.direccionCompuesta}}</td>
+			<td>({{coordenada.latitud}};{{coordenada.longitud}})</td>
+			
+		</tr>
+		{{/each}}
+
+	</table>
+
+{{/partial}}
+				
+{{>layoutAdmin.hbs}}

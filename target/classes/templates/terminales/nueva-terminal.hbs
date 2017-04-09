@@ -1,0 +1,43 @@
+{{# partial "titulo" }}	
+	<title> Nueva Terminal </title>
+{{/partial}}
+
+{{# partial "contenidoAdmin" }}	
+
+<h1> Nueva Terminal: </h1>
+
+<form action="/terminales/" method="POST">
+
+<div class="form-group">
+  	<label for="nombre">Nombre:</label><br>
+	<input type="text" name="nombre" required><br>
+
+	<label for="nombre">Password:</label><br>
+	<input type="password" name="password" required><br>
+</div>
+
+<div class="form-group">
+	
+	<h1> Datos Comuna: </h1><br>
+
+</div>
+
+<div class="form-group">
+	<label for="nombre">Nombre:</label><br>
+	<input type="text" name="comunaNombre" required><br>
+	<label for="nombre">Coordenadas:</label><br>
+	<input type="number" name="latitudX" min="0" max="1000" required><br>
+	<input type="number" name="latitudY" min="0" max="1000" required><br>
+	<input type="number" name="longitudX" min="0" max="1000" required><br>
+	<input type="number" name="longitudY" min="0" max="1000" required><br>
+</div>
+
+<div class="col-md-2">
+	<input type="submit" class="form-control btn btn-default" value="Crear">
+</div>
+
+</form>
+
+{{/partial}}
+				
+{{>layoutAdmin.hbs}}
