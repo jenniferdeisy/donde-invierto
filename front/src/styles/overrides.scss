@@ -1,0 +1,14 @@
+$btn-primary-bg: rgba(235, 49, 94, 0.9);
+$btn-primary-border: transparent;
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    padding: 15px 0;
+    display: block;
+}
