@@ -1,0 +1,66 @@
+{
+    "empresas": [{
+            "nombre": "snapchat",
+            "periodos": [{
+                    "nombre": "Semestral",
+                    "anio": 2016,
+                    "rango": [0, 6],
+                    "cuentas": [{
+                            "descripcion": "EBITDA",
+                            "valor": 100200
+                        },
+                        {
+                            "descripcion": "FDS",
+                            "valor": 50000
+                        },
+                        {
+                            "descripcion": "Free Cash Flow",
+                            "valor": 10022
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Anual",
+                    "anio": 2016,
+                    "rango": [0, 12],
+                    "cuentas": [{
+                            "descripcion": "EBITDA",
+                            "valor": 40000
+                        },
+                        {
+                            "descripcion": "FDS",
+                            "valor": 123444
+                        },
+                        {
+                            "descripcion": "Free Cash Flow",
+                            "valor": 2366784
+                        }
+                    ]
+                }
+            ]
+        }
+
+        ,
+        {
+            "nombre": "facebook",
+            "periodos": [{
+                "nombre": "Semestral",
+                "anio": 2017,
+                "rango": [0, 6],
+                "cuentas": [{
+                        "descripcion": "EBITDA",
+                        "valor": 1255677
+                    },
+                    {
+                        "descripcion": "FDS",
+                        "valor": 0
+                    },
+                    {
+                        "descripcion": "Free Cash Flow",
+                        "valor": 55908
+                    }
+                ]
+            }]
+        }
+    ]
+}
