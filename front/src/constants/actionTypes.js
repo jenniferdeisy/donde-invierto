@@ -1,1 +1,1 @@
-export const INITIAL_LOAD = 'INITIAL_LOAD';
+export const EMPRESA_SELECTED = 'EMPRESA_SELECTED';

@@ -1,0 +1,31 @@
+div.ListaEmpresas {
+  &-webkit-scrollbar {
+   display: none;
+   };
+  border-right: 2px solid black;
+  padding-right: 10px;
+  position: fixed;
+  overflow: scroll;
+  max-height: 100%;
+}
+
+h1.nombre-empresa {
+  font-size: 2em;
+  padding-left: 5px;
+  margin-bottom: -10px;
+}
+
+.sub-info {
+  font-size: 1.2em
+}
+
+.center {
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+div.single-empresa {
+  border-bottom: 1px solid black;
+}
