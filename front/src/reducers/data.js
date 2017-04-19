@@ -1,15 +1,15 @@
-import * as t from '../constants/actionTypes';
+import * as t from '../constants/dataTypes';
 import initialState from './initialState';
 import {mergeDeep} from '../utils/UtilHelper';
 
 
-export default function ui(state = initialState.ui, action) {
+export default function data(state = initialState.data, action) {
   let newState;
 
   switch (action.type) {
-    case t.EMPRESA_SELECTED:
+    case t.INITIAL_DATA_SUCCESS:
       newState = mergeDeep({}, state);
-      newState.empresaSelected = action.empresa;
+      newState.empresas = action.empresas;
       return newState;
 
     default:

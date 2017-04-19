@@ -1,7 +1,11 @@
 
 let initialState = {
   ui: {
-    loaded: false
+    loaded: false,
+    empresaSelected: {}
+  },
+  data: {
+    empresas: []
   }
 };
 
