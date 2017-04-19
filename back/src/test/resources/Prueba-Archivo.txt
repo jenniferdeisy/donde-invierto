@@ -26,14 +26,6 @@
                     "cuentas": [{
                             "descripcion": "EBITDA",
                             "valor": 40000
-                        },
-                        {
-                            "descripcion": "FDS",
-                            "valor": 123444
-                        },
-                        {
-                            "descripcion": "Free Cash Flow",
-                            "valor": 2366784
                         }
                     ]
                 }
