@@ -22,6 +22,7 @@ class CargaEmpresa extends Component  {
                     periodos={this.props.periodosYaAgregados}
                     inputPeriodoValue={this.props.inputPeriodo}
                     inputAnioValue={this.props.inputAnio} />
+          <input type="submit" value="Guardar Empresa" />
         </form>
       </div>
     )
@@ -33,6 +34,7 @@ class CargaEmpresa extends Component  {
     return {
       inputEmpresa: state.ui.inputEmpresa,
       inputPeriodo: state.ui.inputPeriodo,
+      inputAnio: state.ui.inputAnio,
       periodosYaAgregados: state.ui.periodosPorAgregar
     };
   }

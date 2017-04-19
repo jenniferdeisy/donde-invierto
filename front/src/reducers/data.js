@@ -12,6 +12,11 @@ export default function data(state = initialState.data, action) {
       newState.empresas = action.empresas;
       return newState;
 
+    case t.SAVE_EMPRESA_SUCCESS:
+      newState = mergeDeep({}, state);
+      newState.empresas.push(action.empresa);
+      return newState;
+
     default:
       return state;
 

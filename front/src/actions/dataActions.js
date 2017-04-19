@@ -16,17 +16,25 @@ export function loadData(quantity) {
   }
 }
 
-export function cargarEmpresa(nombre) {
-  return (dispatch) => {
+export function cargarEmpresa(e) {
+  return (dispatch, getState) => {
+    e.preventDefault();
+    const state = getState();
+    let empresa;
+
     dispatch({
-      type: types.INITIAL_DATA_REQUEST
+      type: types.SAVE_EMPRESA_REQUEST
     });
 
-    const empresas = Mocker.generateEmpresas(quantity);
-
+    empresa = {
+      nombre: state.ui.inputEmpresa,
+      periodos: state.ui.periodosPorAgregar,
+      id: 10
+    } // TODO: Borrar el 10, se va a mandar al server sin id
+    debugger;
     dispatch({
-      type: types.INITIAL_DATA_SUCCESS,
-      empresas
+      type: types.SAVE_EMPRESA_SUCCESS,
+      empresa
     });
   }
 }

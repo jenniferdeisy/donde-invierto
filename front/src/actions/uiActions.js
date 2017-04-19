@@ -38,15 +38,15 @@ export function inputAnioChange(e) {
 
 
 
-export function agregarPeriodo(nombrePeriodo, anioPeriodo, rangoInicio, rangoFin) {
+export function agregarPeriodo(nombrePeriodo, anioPeriodo, rangoInicio = 0, rangoFin = 12) {
   return (dispatch) => {
+    debugger;
     const periodo = {
       nombre: nombrePeriodo,
       anio: anioPeriodo,
       rango: [rangoInicio, rangoFin],
       cuentas: []
     };
-    debugger;
     dispatch({
       type: types.AGREGAR_PERIODO,
       periodo
