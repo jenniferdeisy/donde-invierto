@@ -15,3 +15,18 @@ export function loadData(quantity) {
     });
   }
 }
+
+export function cargarEmpresa(nombre) {
+  return (dispatch) => {
+    dispatch({
+      type: types.INITIAL_DATA_REQUEST
+    });
+
+    const empresas = Mocker.generateEmpresas(quantity);
+
+    dispatch({
+      type: types.INITIAL_DATA_SUCCESS,
+      empresas
+    });
+  }
+}

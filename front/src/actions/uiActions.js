@@ -8,3 +8,48 @@ export function selectEmpresa(empresa) {
     })
   }
 }
+
+export function inputEmpresaChange(e) {
+  return (dispatch) => {
+    dispatch({
+      type: types.INPUT_EMPRESA_CHANGED,
+      value: e.target.value
+    });
+  }
+}
+
+export function inputPeriodoChange(e) {
+  return (dispatch) => {
+    dispatch({
+      type: types.INPUT_PERIODO_CHANGED,
+      value: e.target.value
+    });
+  }
+}
+
+export function inputAnioChange(e) {
+  return (dispatch) => {
+    dispatch({
+      type: types.INPUT_ANIO_CHANGED,
+      value: e.target.value
+    });
+  }
+}
+
+
+
+export function agregarPeriodo(nombrePeriodo, anioPeriodo, rangoInicio, rangoFin) {
+  return (dispatch) => {
+    const periodo = {
+      nombre: nombrePeriodo,
+      anio: anioPeriodo,
+      rango: [rangoInicio, rangoFin],
+      cuentas: []
+    };
+    debugger;
+    dispatch({
+      type: types.AGREGAR_PERIODO,
+      periodo
+    });
+  }
+}
